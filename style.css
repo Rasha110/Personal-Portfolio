@@ -1,0 +1,335 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css);
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+.bar{
+    background-color: teal; 
+    width: 20%;
+    font-size: 20px;
+    height: 100vh;
+    color: white;
+    overflow: hidden;
+}
+.bar nav{
+padding: 50px;
+
+align-items: center;
+}
+.bar nav li{
+    list-style-type: none;
+    padding-top: 30px;
+padding-bottom: 25px;
+}
+.bar nav li a{
+    text-decoration: none;
+    color: white;
+}
+*{
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin:0;
+    padding: 0;
+}
+.personal{
+  align-items: center;
+    width: 80%;
+}
+.container{
+    display: flex;
+}
+.info{
+
+    height: 50vh;
+    width: 80%;
+    margin: auto;
+    margin-top: 100px;
+    display: flex;
+   justify-content: space-around;
+}
+.pic img{
+    width: 270px;
+    height: 50vh;
+}
+.devInfo{
+justify-content: center;
+display: flex;
+flex-direction: column;
+font-family: "Lato", sans-serif;
+font-weight: 400;
+font-style: normal;
+}
+.buttons button{    
+    background-color: teal;
+    color: white;
+    border: 2px solid white;
+    border: none;
+    padding: 18px ;
+    border-radius: 4px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+.buttons button:hover {
+    background-color: white;
+    border: 2px solid teal;
+    color: black;
+    font-size: 18px;
+  }
+  .hello{
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: #05998c;
+  }
+  .name{
+    font-weight: 600;
+    font-size: 35px;
+    margin-bottom: 5px;
+    color: teal;
+  }
+  .about{
+    font-weight: 300px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #05998c;
+  }
+  .center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.button2{  
+    font-family: Lato, sans-serif;   
+background-color: rgb(89, 171, 171);
+color: white;
+border: 2px solid white;
+border: none;
+padding: 16px ;
+border-radius: 12px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 18px;
+margin: 20px;
+transition-duration: 0.4s;
+cursor: pointer;
+width: 100px;
+}
+button:hover {
+background-color: white;
+border: 2px solid teal;
+color: black;
+
+}
+h2 {
+    font-size: 40px;
+    font-weight: 700;
+    margin-top: 70px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.container2{
+display: flex;
+justify-content: center;
+align-items: center;
+    flex-direction: column;
+    border-radius: 5px;
+color: white;
+background-color: teal;
+width: 300px;
+padding: 30px;
+margin: auto;
+}
+.inputs{
+display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+    
+}
+.form{
+margin-left :-100px;
+    font-family: Lato, sans-serif;
+    font-size: 12px;
+    margin-bottom: 15px;
+}
+
+/*My intro css*/
+.paragraph{
+  margin-top: 20px;
+  margin-left: 5px;
+}
+
+
+.skills-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    
+}
+.skill {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 350px; 
+    margin: 0 auto; 
+}
+.skill p {
+    margin-left: -40px;
+  color: teal;
+  font-weight: 700;
+    font-size: 1.2em;
+}
+
+.circle {
+    position: relative;
+    margin-left: 150px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle span {
+    position: absolute;
+    font-size: 1.1em;
+    color: white;
+    font-weight: 450;
+}
+
+.circle::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 5x solid #05998c;
+    
+}
+
+.circle::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 5px solid #05998c;
+   
+    transform: rotate(0deg);
+}
+.name {
+    font-family:"Lato", sans-serif; ;
+    font-size: 2.5em;
+    color: teal;
+    overflow: hidden; 
+    border-right: 0.15em solid teal; 
+    white-space: nowrap;
+    margin: 0 auto; 
+    animation: typing 4s steps(12), blink 0.75s step-end infinite; 
+    width: fit-content; 
+  }
+  /* my project css*/
+  .ToDoList, .DigitalClock{
+    height: 210px;
+    width: 360px;
+    margin-top: 10px;
+    margin-left: 20px;
+    cursor: pointer;
+  }
+  .GroceryList ,.PasswordGenerator{
+    height: 210px;
+    width: 360px;
+    margin-top: 10px;
+    margin-left: 20px;
+    cursor: pointer;
+  }
+  .content {
+    width: 80%;
+    padding: 20px;
+  }
+  .project-container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  
+    gap: 20px;
+    
+  }
+  .project-container1, .project-container2{
+    width: 50%;
+  }
+  
+  .project-row{
+    display: flex;
+  }
+  
+.project1, .project2 ,.project3 ,.project4{
+    color: teal;
+    font-weight: 700;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+  @keyframes typing {
+    0% {
+        width: 0;
+    }
+    50% {
+        width: 100%;
+    }
+    60% {
+        width: 100%;
+    }
+    100% {
+        width: 0;
+    }
+}
+
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+@media only screen and (max-width: 981px) {
+   
+    .bar{
+       width: 150px;
+  }
+  .bar nav{
+    margin-top: 30px;
+    padding: 30px;
+    font-size: 18px;
+    
+    }
+    .info{
+       margin-left: 30px;
+        height: 222px;
+        width: 600px;
+        margin-top: 100px;
+    }
+    .pic img{padding: 8px;
+        width: 180px;
+        height: 222px;
+    }
+    .skills-container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin: 5px;
+        margin-left:50px;  
+    }
+  
+.container2 {
+    position: relative;
+    margin: auto;
+width: 210px;
+padding: 20px;
+margin-left: 5px;
+}
+}
