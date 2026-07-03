@@ -139,7 +139,7 @@ export const featuredWork = [
     id: "zenleaf-dispensaries",
     title: "Zenleaf Dispensaries",
     description:
-      "Contributed to production marketing pages and components, shipping updates through Next.js and Builder.io CMS.",
+      "Contributed to production marketing pages and components, shipping updates through Next.js.",
     stack: ["Airtable", "Next.js", "Tailwind CSS", "WordPress", "n8n"],
     image: "/zenleaf.png",
     imageAspect: 2880 / 1572,
