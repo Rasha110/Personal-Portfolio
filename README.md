@@ -1,6 +1,6 @@
 # Rasha Faheem — Portfolio
 
-A dark, code-editor-inspired portfolio for **Rasha Faheem**, Automation Engineer & Full-Stack Developer. Built with Next.js, Tailwind CSS, and Framer Motion — terminal windows, syntax-highlighted skill tabs, a git-log-styled experience timeline, and a browser-chrome frame for every project screenshot.
+A dark, code-editor-inspired portfolio, Automation Engineer & Full-Stack Developer. Built with Next.js, Tailwind CSS, and Framer Motion — terminal windows, syntax-highlighted skill tabs, a git-log-styled experience timeline, and a browser-chrome frame for every project screenshot.
 
 **Live site:** _add your deployed URL here_
 
