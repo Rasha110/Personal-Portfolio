@@ -1,0 +1,147 @@
+@import "tailwindcss";
+
+:root {
+  /* Dark, code-editor inspired palette (GitHub/VS Code dark tones).
+     Blue/green/purple/orange map to familiar syntax-highlight roles. */
+  --paper: #0d1117;
+  --paper-alt: #0a0e14;
+  --paper-deep: #161b22;
+  --ink: #e6edf3;
+  --ink-soft: #adb7c2;
+  --ink-faint: #7d8590;
+  --line: rgba(230, 237, 243, 0.1);
+  --line-strong: rgba(230, 237, 243, 0.2);
+  --accent: #58a6ff;
+  --accent-soft: #79c0ff;
+  --accent-tint: rgba(88, 166, 255, 0.12);
+  --forest: #3fb950;
+  --forest-tint: rgba(63, 185, 80, 0.12);
+  --purple: #bc8cff;
+  --orange: #ffa657;
+  --red: #ff7b72;
+}
+
+@theme inline {
+  --color-paper: var(--paper);
+  --color-paper-alt: var(--paper-alt);
+  --color-paper-deep: var(--paper-deep);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-ink-faint: var(--ink-faint);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-accent-tint: var(--accent-tint);
+  --color-forest: var(--forest);
+  --color-forest-tint: var(--forest-tint);
+  --color-purple: var(--purple);
+  --color-orange: var(--orange);
+  --color-red: var(--red);
+
+  --font-display: var(--font-mono-jb);
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-mono-jb);
+
+  --animate-marquee: marquee 32s linear infinite;
+  --animate-blink: blink 1.1s step-end infinite;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-sans);
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--paper);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--paper);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--paper-deep);
+  border-radius: 999px;
+  border: 2px solid var(--paper);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--line-strong);
+}
+
+/* Subtle grain layered over the whole page — overlay blend keeps it visible
+   without crushing shadows to black the way multiply would on a dark bg. */
+.grain-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  pointer-events: none;
+  opacity: 0.035;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.balance {
+  text-wrap: balance;
+}
+
+.pretty {
+  text-wrap: pretty;
+}
+
+.caret-blink::after {
+  content: "";
+  display: inline-block;
+  width: 0.55ch;
+  margin-left: 2px;
+  height: 1em;
+  vertical-align: -0.15em;
+  background: currentColor;
+  animation: blink 1.1s step-end infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
