@@ -1,36 +1,58 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Rasha Faheem — Portfolio
+
+A dark, code-editor-inspired portfolio for **Rasha Faheem**, Automation Engineer & Full-Stack Developer. Built with Next.js, Tailwind CSS, and Framer Motion — terminal windows, syntax-highlighted skill tabs, a git-log-styled experience timeline, and a browser-chrome frame for every project screenshot.
+
+**Live site:** _add your deployed URL here_
+
+## Features
+
+- **Hero** — typewriter status line, animated ambient gradients, JSDoc-style summary block
+- **About** — real headshot in a terminal-tab frame, professional summary rendered as `about.md`
+- **Capabilities** — interactive tabbed code viewer (`skills.js`) with syntax-highlight colors
+- **Services** — four-card grid of what I help teams with
+- **Work** — featured client projects (Tiphaus, Zenleaf Dispensaries), personal/practice projects, and a dedicated Final Year Project section, each screenshot framed at its true aspect ratio
+- **Experience** — `git log --oneline` styled career timeline with fake commit hashes
+- **Contact** — terminal-form (`send.sh`) that opens a pre-filled email, plus direct links
+- **Resume download** — one-click `resume.pdf` button in the hero
+- Lenis smooth scrolling wired to in-page anchor links, dark theme throughout, reduced-motion support
+
+## Tech Stack
+
+- [Next.js 16](https://nextjs.org) (App Router)
+- [Tailwind CSS 4](https://tailwindcss.com)
+- [Framer Motion](https://www.framer.com/motion/)
+- [Lenis](https://lenis.darkroom.engineering/) for smooth scrolling
+- [Lucide](https://lucide.dev) + [react-icons](https://react-icons.github.io/react-icons/) for icons
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view it.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+src/
+  app/            # App Router entry (layout, page, metadata, sitemap, robots)
+  components/     # Section components (Hero, About, Skills, Projects, ...)
+  components/ui/  # Reusable primitives (WindowChrome, Reveal, MagneticButton, ...)
+  lib/             # Content data (data.js) and scroll helper
+public/            # Images, resume PDF
+```
 
-## Learn More
+All page content — bio, skills, projects, experience, links — lives in [`src/lib/data.js`](src/lib/data.js), so copy can be updated without touching component code.
 
-To learn more about Next.js, take a look at the following resources:
+## Build
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm run build
+npm run start
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Deployment
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Deploys cleanly to [Vercel](https://vercel.com/new) (zero config) or any Node.js host that supports Next.js.
